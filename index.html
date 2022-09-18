@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Sets what is shown in the top bar-->
+    <title>Count Down</title>
+</head>
+<!--Text and backround customisation-->
+<STYLE>
+  body {background-image: url(file:///C:/Users/PC/Downloads/dreamstime_xxl_44364214.jpg);}
+  h1 {font-size: xx-large;color: white;}
+  h1 {text-align: center;}
+  p {font-size: larger;color: white;}
+  P {text-align: center;}
+  div{text-align: center;}
+</STYLE>
+<body>
+    <!--Main Head line-->
+    <h1> Blast Off!</h1>
+    <!--Main text on the page-->
+    <p>Count Down:</p>
+    <!--Creats the space for the timer-->
+    <p id="Timer"><strong></strong></p>
+    <p id="a">Luanch pending</p>
+     <!--Creates the Button and centers it--> 
+     <div>
+       <button onclick="Timer()">Start Count Down!</button>
+     </div>  
+   
+    <!--Starts javascript in the code and sets the start and stop for the timer-->
+    <script>
+     let currTime = 50;
+   function Timer() {
+        document.getElementById("Timer").innerHTML = currTime; 
+        
+          let element = document.getElementById("Timer");
+          Tmed = setInterval(function() {element.innerHTML = currTime -= 1}, 1000);
+           setTimeout(Timestop, 50000);
+            function Timestop(){
+                clearInterval(Tmed);
+                document.getElementById("a").innerHTML = "Launch Succesful!";
+                 alert("BLAST OFF!!!!");
+            }
+        }
+
+    </script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
