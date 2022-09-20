@@ -20,7 +20,6 @@
     <p>Count Down:</p>
     <!--Creats the space for the timer-->
     <p id="Timer"><strong></strong></p>
-    <p id="a">Luanch pending</p>
      <!--Creates the Button and centers it--> 
      <div>
        <button onclick="Timer()">Start Count Down!</button>
@@ -34,11 +33,11 @@
         
           let element = document.getElementById("Timer");
           Tmed = setInterval(function() {element.innerHTML = currTime -= 1}, 1000);
-           setTimeout(Timestop, 50000);
+           setTimeout(Timestop, 51000);
             function Timestop(){
                 clearInterval(Tmed);
-                document.getElementById("a").innerHTML = "Launch Succesful!";
-                 alert("BLAST OFF!!!!");
+                alert("BLAST OFF!!!!");
+                document.getElementById("Timer").innerHTML = "Launch Succesful!";
             }
         }
 
